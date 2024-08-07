@@ -2,11 +2,11 @@
 
 New Opencore EFI maintaining for Lenovo Miix 720.
 
-[The another repository on Github](https://github.com/jennie26/Lenovo-Miix-720-Hackintosh) has stop its maintaining and keeps at Opencore 0.62 version.
+[The another repository on Github](https://github.com/jennie26/Lenovo-Miix-720-Hackintosh) had stopped its maintenance with an older Opencore 0.6.2 version.
 
-Now this repository will continue the support for Lenovo Miix 720. But there's some difference between that, my level of completion may not be high as its, altought I can't boot its EFI on my device.
+However, this repository now provides newer support for the Lenovo Miix 720. But there are some differences between the two, my level of completion may not be high as the older one. (Although I can't boot its EFI on my device)
 
-Current Opencore version: `1.0`
+Current Opencore version: `1.0.0`
 
 ## Specs
 
@@ -18,33 +18,36 @@ Current Opencore version: `1.0`
 |Network adapter|Intel Dual Band Wireless-AC 8265|
 |Audio decoder|Realtek ALC236|
 |BIOS version|3SEC71WW|
-|Display |12.2' 2880*1920|
-|Storage |Western Digital Black Disk SN720|
-         |(But it's ok for Eaget SSD Device 512GB what I'm using now)|
-|Touchpad|Idk because my coverpad has unusable lol|
+|Display |12.2’ 2880*1920|
+|Storage |Western Digital Black Disk SN720<br>(But it's ok for Eaget SSD Device 512GB, what I'm using now)|
+|Touchpad|Idk because my lid is unusable lol|
 
 ## Validated macOS version
 
 - [x] Big Sur 11.7.10
-- [x] Catalina
 
-## What you need to adjust if using
+- [x] Catalina 10.15.7
 
-- PlatformInfo -> Generic
+## Necessary adjustments
 
-- If you are using different network adapter, would required to change your kext.
+- Change the model information at `PlatformInfo` -> `Generic`.
 
-## Known issue / Todo
+- Original network adapter on this device is AC-8265, if you replace it, you would required to adjust the kexts, etc.
+
+- Required to download the latest [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) for Wi-Fi connecting because I use `itlwm` kext here.
+  - This also means that you can't use the online installer as [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html) uses. Please use a full installer instead.
+  - Itlwm recommends using `itlwm.kext` rather than `AirportItlwm` for stability reasons, but you can still replace it with the airport one. Then you can use the online installer.
+
+## Known issues / Todo
 
 - [ ] Backlight issue
-
-- May meet a black screen when entering macOS. Can be solved by cover with coverpad then remove.
-     You can display normally by changing the value to `78563412` in `AAPL,ig-platform-id`, but that would lose your brightness adjusting and display in a max brightness.
+  - May encounter a black screen when entering macOS. This can be solved by close then open the lid.
 
 - [ ] MicroSD card (TF card) slot support
 
-- [ ] Would be great if touchscreen supports.
+- [ ] Would be great if touchscreen supports
 
 - [ ] Battery level issue
+  - It doesn't show the battery status.
 
-- It doesn't show battery.
+- [ ] Microphone support
