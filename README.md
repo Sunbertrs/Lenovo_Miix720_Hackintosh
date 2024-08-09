@@ -24,6 +24,8 @@ Current Opencore version: `1.0.0`
 
 ## Validated macOS version
 
+- [ ] Ventura 13.6.9
+
 - [x] Big Sur 11.7.10
 
 - [x] Catalina 10.15.7
@@ -36,7 +38,7 @@ Current Opencore version: `1.0.0`
 
 - Required to download the latest [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) for Wi-Fi connecting because I use `itlwm` kext here.
   - This also means that you can't use the online installer as [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html) uses. Please use a full installer instead.
-  - Itlwm recommends using `itlwm.kext` rather than `AirportItlwm` for stability reasons, but you can still replace it with the airport one. Then you can use the online installer.
+  - For stability reasons according to documents in Itlwm, I using `itlwm.kext` here rather than `AirportItlwm`. But you can still replace it with the airport one for native network support. Then you can try the online installer.
 
 ## Known issues / Todo
 
@@ -49,5 +51,8 @@ Current Opencore version: `1.0.0`
 
 - [ ] Battery level issue
   - It doesn't show the battery status.
-
-- [ ] Microphone support
+  
+- [ ] Storage drive issue
+  - Everything goes well but it stucks at `AppleIntelLpassI2CController` and `IOKit Daemon (kernelmanagerd) stall[] (60s): 'IOUSBHostDevice' (a,20000001)` for some time after updating to Ventura.
+  - Also stucks at `syncing disks... Killing all processes` for some time when shutting down.
+  - My boot USB-disk can't be recognized, and all the available partitions in internal disk will show twice in Finder sidebar.

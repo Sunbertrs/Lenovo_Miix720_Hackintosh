@@ -16,83 +16,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-Cpu0Ist.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-Cpu0Ist.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-EC-USBX-LAPTOP.aml</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-EC-USBX-LAPTOP.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-LPC.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-LPC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-ADD0.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-ADD0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-BAL0.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-BAL0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-BATT.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-BATT.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-BATX.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-BATX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-GPRW.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-GPRW.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OC-TSCX.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OC-TSCX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-OCGPI0-GPEN.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-OCGPI0-GPEN.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -117,30 +45,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PNLF.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-PTSWAK.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PTSWAK.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-TYPC.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-TYPC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-XOSI.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-XOSI.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -324,7 +228,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<integer>3</integer>
+				<integer>11</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -553,7 +457,7 @@
 				<key>Comment</key>
 				<string>SMCBatteryManager.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCBatteryManager</string>
 				<key>MaxKernel</key>
@@ -571,7 +475,7 @@
 				<key>Comment</key>
 				<string>SMCLightSensor.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCLightSensor</string>
 				<key>MaxKernel</key>
@@ -1039,7 +943,7 @@
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Scheme</key>
 		<dict>
