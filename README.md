@@ -24,7 +24,7 @@ Current Opencore version: `1.0.0`
 
 ## Validated macOS version
 
-- [ ] Ventura 13.6.9
+- [x] Ventura 13.6.9
 
 - [x] Big Sur 11.7.10
 
@@ -36,9 +36,7 @@ Current Opencore version: `1.0.0`
 
 - Original network adapter on this device is AC-8265, if you replace it, you would required to adjust the kexts, etc.
 
-- Required to download the latest [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) for Wi-Fi connecting because I use `itlwm` kext here.
-  - This also means that you can't use the online installer as [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html) uses. Please use a full installer instead.
-  - For stability reasons according to documents in Itlwm, I using `itlwm.kext` here rather than `AirportItlwm`. But you can still replace it with the airport one for native network support. Then you can try the online installer.
+- Network may won't work if you are using the version older than Ventura, you may need to replace the [AirportItlwm kext](https://github.com/OpenIntelWireless/itlwm/releases/) for what version you are using.
 
 ## Known issues / Todo
 
@@ -51,8 +49,5 @@ Current Opencore version: `1.0.0`
 
 - [ ] Battery level issue
   - It doesn't show the battery status.
-  
-- [ ] Storage drive issue
-  - Everything goes well but it stucks at `AppleIntelLpassI2CController` and `IOKit Daemon (kernelmanagerd) stall[] (60s): 'IOUSBHostDevice' (a,20000001)` for some time after updating to Ventura.
-  - Also stucks at `syncing disks... Killing all processes` for some time when shutting down.
-  - My boot USB-disk can't be recognized, and all the available partitions in internal disk will show twice in Finder sidebar.
+
+- [ ] AirDrop can't use
