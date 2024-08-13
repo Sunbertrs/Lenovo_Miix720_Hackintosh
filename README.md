@@ -24,7 +24,7 @@ Current Opencore version: `1.0.0`
 
 ## Validated macOS version
 
-- [x] Ventura 13.6.9
+- [ ] Ventura 13.6.9
 
 - [x] Big Sur 11.7.10
 
@@ -36,7 +36,7 @@ Current Opencore version: `1.0.0`
 
 - Original network adapter on this device is AC-8265, if you replace it, you would required to adjust the kexts, etc.
 
-- Network may won't work if you are using the version older than Ventura, you may need to replace the [AirportItlwm kext](https://github.com/OpenIntelWireless/itlwm/releases/) for what version you are using.
+- Network may won't work you are using the version older than Ventura, you may need to replace the [AirportItlwm kext](https://github.com/OpenIntelWireless/itlwm/releases/) for what version you are us.
 
 ## Known issues / Todo
 
@@ -44,10 +44,7 @@ Current Opencore version: `1.0.0`
   - May encounter a black screen when entering macOS. This can be solved by close then open the lid.
 
 - [ ] MicroSD card (TF card) slot support
-
-- [ ] Would be great if touchscreen supports
+  - Solving...
 
 - [ ] Battery level issue
   - It doesn't show the battery status.
-
-- [ ] AirDrop can't use
