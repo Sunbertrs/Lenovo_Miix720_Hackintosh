@@ -1,0 +1,32 @@
+- [16]
+
+into device label EC0 code_regex <VAR16>,\s+16, replace_matched begin <VAR8>,8,<VAR8>,8, end;
+
+into method label <METHOD> code_regex <THE16> replaceall_matched begin B1B2(<VAR8>,<VAR8>) end;
+
+- [>32]
+
+READ
+into method label <METHOD> code_regex <VAR> replaceall_matched begin RECB(<OFFSET>,<VARBYTES>) end;
+
+WRITE
+into method label <METHOD> code_regex <VAR>\s=\s<OTHERONE> replaceall_matched begin WECB(<OFFSET>,<VARBYTES>,<OTHERONE>) end；
+into method label <METHOD> code_regex RECB(<OFFSET>,<VARBYTES>)\s=\s<OTHERONE> replaceall_matched begin WECB(<OFFSET>,<VARBYTES>,<OTHERONE>) end；
+
+- [Reference to]
+
+https://blog.gzxiaobai.cn/post/为小白设计的电池教程（DSDT）
+
+https://blog.gzxiaobai.cn/post/进阶：电池热补丁（Battery-Hotpatch）之路
+
+- [P.s.]
+
+VAR16 split into two VAR8
+
+VAR = the var larger than 32 bytes
+
+VARBYTES = the bytes that the var occupied
+
+OFFSET = the offset address in field
+
+OTHERONE = the var to be read

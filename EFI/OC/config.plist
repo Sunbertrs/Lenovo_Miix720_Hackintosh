@@ -62,6 +62,14 @@
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-BATT.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -301,9 +309,9 @@
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,4/0,0</string>
 				<key>compatible</key>
-				<string>pci1217,8621</string>
+				<string>pci14e4,16bc</string>
 				<key>device_type</key>
-				<string>Media Controller</string>
+				<string>Card reader</string>
 				<key>model</key>
 				<string>SD/MMC Card Reader Controller</string>
 			</dict>
@@ -463,24 +471,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>CtlnaSDXC.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CtlnaSDXC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>ECEnabler.kext</string>
 				<key>Comment</key>
 				<string>ECEnabler.kext</string>
@@ -503,7 +493,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/EmeraldSDHC</string>
 				<key>MaxKernel</key>
